@@ -1,0 +1,156 @@
+:root{
+    --dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--dark);
+    color: #FFF;
+}
+
+header{
+   max-width: 800px;
+   width: 100%; 
+   padding: 2rem 1rem;
+   margin : 0 auto;
+}
+
+header h1, .task_list h2{
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--grey);
+    margin-bottom: 1rem;
+}
+
+
+#new_task_form{
+    display: flex;
+}
+
+
+input, button {
+    appearance: none;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+#new_task_input{
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    flex: 1 1 0%;
+    font-size: 1.25rem;
+    color: #EEE;
+}
+
+#new_task_input::placeholder{
+    color: var(--grey);
+}
+
+#new_task_submit{
+    color: var(--grey);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#new_task_submit:hover{
+    color: var(--pink);
+    background-color: var(--dark);
+    scale: 1.1;
+    
+}
+
+#new_task_submit:focus{
+    color: var(--light);
+
+}
+
+
+
+main{
+   flex: 1 1 0%;
+   max-width: 800px;
+   width: 100%; 
+   padding: 2rem 1rem;
+   margin : 0 auto;
+}
+
+.task_list{
+    padding: 1rem 0rem;
+}
+
+
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+#tasks .task .content{
+    background-color: var(--darkest);
+    width: 70%;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    flex: 1 1 0%;
+}
+#tasks .task .content input {
+    color: var(--light);
+    padding: 0rem 0.5rem;
+    cursor:arrow;
+    font-size: 1.25rem;
+    width: 100%;
+}
+
+#tasks .task .content input:focus{
+    color: var(--pink);
+}
+
+#tasks .task .actions{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#tasks .task .actions button{
+    width: 45%;
+    padding : 0 1rem;
+    cursor: pointer;
+    font-weight: 700;
+    color : var(--grey);
+    font-size: 1rem;
+    transition: 0.4s;
+}
+
+#tasks .task .actions button:hover{
+    scale: 1.1;
+    color: var(--pink);
+}
+
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
