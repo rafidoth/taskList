@@ -37,6 +37,10 @@ header h1, .task_list h2{
     margin-bottom: 1rem;
 }
 
+#credit{
+    color: var(--grey);
+    margin-bottom: 10px;
+}
 
 #new_task_form{
     display: flex;
